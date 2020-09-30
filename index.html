@@ -107,9 +107,9 @@
 
         async function predict() {
             var dic_class2information = {};
-            dic_class2information['case1'] = '설명1';
-            dic_class2information['case2'] = '설명2';
-            dic_class2information['case3'] = '설명3';
+            dic_class2information['빨간사과'] = '사과나무의 열매';
+            dic_class2information['토마토'] = '가짓가의 한해살이풀, 붉게 익으면 사용한다.';
+            dic_class2information['딸기'] = '딸기속 식물을 가리키며 열매는 식용하는 것이 많다.';
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
